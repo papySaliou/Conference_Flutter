@@ -124,6 +124,16 @@ class _PageAddEventState extends State<PageAddEvent> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
+
+              style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.green, // Change la couleur ici
+              foregroundColor: Colors.white, // Change la couleur du texte
+
+              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24), // Ajuste la taille du bouton
+              shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10), // Arrondi les bords
+                     ),
+  ),
                 onPressed: (){
                   if (_formKey.currentState!.validate()){
                     final confName = confNameController.text;
@@ -146,7 +156,16 @@ class _PageAddEventState extends State<PageAddEvent> {
                     });
                   }
                 }, 
-                child: Text("Envoyer")
+                child: Text("Envoyer",
+                  style: TextStyle(
+                  fontSize: 20, // Taille du texte
+                  fontWeight: FontWeight.bold, // Gras
+                  fontStyle: FontStyle.italic, // Italique
+                  color: Colors.white, // Couleur du texte
+                  letterSpacing: 1, // Espacement des lettres
+                   ),
+
+                )
               ),
             ),
           ],
